@@ -109,6 +109,7 @@ nav a {
   background: var(--accentColor);
   color: black;
 }
+
 .btn-primary:hover {
   color: white;
 }
@@ -143,4 +144,41 @@ footer {
   background: var(--mainBlue);
   color: white;
   font-size: 1.6rem;
+}
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  header .graph {
+    display: none;
+  }
+
+  header .companyinfo {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 465px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: var(--smallSpacer);
+  }
 }
